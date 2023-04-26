@@ -1,0 +1,128 @@
+/* colors and styling */
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right,
+            hsl(187, 85%, 43%),
+            hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+
+.header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: var(--whiteColorDeam);
+  width: 100%;
+  padding: 16px;
+  z-index: 1000;
+  -webkit-box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+          box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+}
+
+.header .logo {
+  color: var(--blackColor);
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header .logo .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+@media screen and (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    background: var(--whiteColorDeam);
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 16px;
+    top: -5000px;
+    left: 50%;
+    padding: 16px;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 2000;
+    -webkit-box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  .header .navbar .navList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 8px 0;
+  }
+  .header .navbar .navList .navItem {
+    padding: 8px 0;
+  }
+  .header .navbar .navList .navItem .navLink {
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .header .navbar .navList .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .navbar .navList .btn {
+    margin-top: 16px;
+  }
+  .header .navbar .navList .btn a {
+    font-weight: 600;
+    color: var(--whiteColor);
+  }
+  .header .activeNavbar {
+    top: 96px;
+  }
+  .header .closeNavbar {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    color: var(--PrimaryColor);
+  }
+  .header .closeNavbar:hover {
+    color: var(--SecondaryColor);
+  }
+}
+
+.header .toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+}
+
+.header .toggleNavbar:hover .icon {
+  color: var(--SecondaryColor);
+}
+/*# sourceMappingURL=navbar.css.map */

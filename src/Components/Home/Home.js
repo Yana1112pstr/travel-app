@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.scss";
 import video2 from "../../Assets/video2.mp4";
 import { GrLocation } from "react-icons/gr";
@@ -7,7 +7,14 @@ import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { FaTripadvisor, FaListUl } from "react-icons/fa";
 import { TbApps } from "react-icons/tb";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <section className="home">
       <div className="overlay"></div>
@@ -21,10 +28,14 @@ const Home = () => {
       ></video>
       <div className="homeContent container">
         <div className="textDiv">
-          <span className="smallText">Our Packages</span>
-          <h1 className="homeTitle">Search your Holidays</h1>
+          <span data-aos="fade-up" className="smallText">
+            Our Packages
+          </span>
+          <h1 data-aos="fade-up" className="homeTitle">
+            Search your Holidays
+          </h1>
         </div>
-        <div className="cardDiv grid">
+        <div data-aos="fade-up" className="cardDiv grid">
           <div className="destinationInput">
             <label htmlFor="city">Search your destination:</label>
             <div className="input flex">
@@ -56,7 +67,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="homeFooterIcons flex">
+        <div data-aos="fade-up" className="homeFooterIcons flex">
           <div className="rightIcons">
             <FiFacebook className="icon" />
             <FiInstagram className="icon" />

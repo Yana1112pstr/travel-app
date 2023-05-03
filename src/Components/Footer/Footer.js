@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./footer.scss";
 import video1 from "../../Assets/video1.mp4";
 import { BsSend } from "react-icons/bs";
@@ -11,7 +11,14 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <section className="footer">
       <div className="videoDiv">
@@ -19,13 +26,17 @@ const Footer = () => {
       </div>
       <div className="secContent container">
         <div className="contactDiv flex">
-          <div className="text">
+          <div data-aos="fade-up" className="text">
             <small>KEEP IN TOUCH</small>
             <h2>Travel with us</h2>
           </div>
           <div className="inputDiv flex">
-            <input type="text" placeholder="Enter Email Address" />
-            <button className="btn flex" type="submit">
+            <input
+              data-aos="fade-up"
+              type="text"
+              placeholder="Enter Email Address"
+            />
+            <button data-aos="fade-up" className="btn flex" type="submit">
               SEND
               <BsSend className="icon" />
             </button>
@@ -40,13 +51,13 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="footerParagraph">
+            <div data-aos="fade-up" className="footerParagraph">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </div>
-            <div className="footerSocials flex">
+            <div data-aos="fade-up" className="footerSocials flex">
               <FaTwitter className="icon" />
               <FaYoutube className="icon" />
               <FaInstagram className="icon" />
@@ -55,7 +66,11 @@ const Footer = () => {
           </div>
           <div className="footerLinks grid">
             {/* Group One */}
-            <div className="linkGroup">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="linkGroup"
+            >
               <span className="groupTitle">OUR AGENCY</span>
               <li className="footerList flex">
                 <FaChevronRight className="icon" />
@@ -79,7 +94,11 @@ const Footer = () => {
               </li>
             </div>
             {/* Group Two */}
-            <div className="linkGroup">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="4000"
+              className="linkGroup"
+            >
               <span className="groupTitle">PARTNERS</span>
               <li className="footerList flex">
                 <FaChevronRight className="icon" />
@@ -103,7 +122,11 @@ const Footer = () => {
               </li>
             </div>
             {/* Group Three */}
-            <div className="linkGroup">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="5000"
+              className="linkGroup"
+            >
               <span className="groupTitle">LAST MINUTE</span>
               <li className="footerList flex">
                 <FaChevronRight className="icon" />

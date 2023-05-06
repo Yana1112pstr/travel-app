@@ -111,5 +111,61 @@
         &:hover .icon {
             color: var(--SecondaryColor);
         }
+
+    }
+}
+
+// media queries
+@media screen and (min-width: 769px) {
+    .toggleNavbar,.closeNavbar {
+        display: none;
+    };
+
+    .header {
+        padding: 24px 32px;
+        .navbar{
+            .navList{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                .navItem{
+                    .navLink{
+                        color: var(--textColor);
+                        padding: 0 7px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        &:hover{
+                            color: var(--PrimaryColor);
+                        }
+                    }
+                }
+                .btn {
+                    margin-left: 16px;
+                    a{
+                        color: var(--whiteColor);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}  
+
+@media screen and (min-width: 960px) {
+    .header{
+        .navbar{
+            .navList{
+                .navItem{
+                    padding: 0 11px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header {
+        padding: 16px 130px;
     }
 }

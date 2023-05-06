@@ -125,4 +125,56 @@
 .header .toggleNavbar:hover .icon {
   color: var(--SecondaryColor);
 }
+
+@media screen and (min-width: 769px) {
+  .toggleNavbar, .closeNavbar {
+    display: none;
+  }
+  .header {
+    padding: 24px 32px;
+  }
+  .header .navbar .navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .header .navbar .navList .navItem .navLink {
+    color: var(--textColor);
+    padding: 0 7px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .header .navbar .navList .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .navbar .navList .btn {
+    margin-left: 16px;
+  }
+  .header .navbar .navList .btn a {
+    color: var(--whiteColor);
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header .navbar .navList .navItem {
+    padding: 0 11px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 16px 130px;
+  }
+}
 /*# sourceMappingURL=navbar.css.map */

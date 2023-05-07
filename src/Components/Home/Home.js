@@ -32,7 +32,7 @@ const Home = () => {
             Our Packages
           </span>
           <h1 data-aos="fade-up" className="homeTitle">
-            Search your Holidays
+            Search your Holiday
           </h1>
         </div>
         <div data-aos="fade-up" className="cardDiv grid">

@@ -93,3 +93,21 @@ video {
 input {
   font-size: 100%;
 }
+
+/* media queries */
+
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 80% !important;
+    margin: auto !important;
+  }
+  .section {
+    padding: 96px 0 64px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+}
